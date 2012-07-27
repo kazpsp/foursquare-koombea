@@ -1,0 +1,18 @@
+<h2>Tips</h2>
+
+<div id="Tips">	
+	
+<ul>	
+	<h3><%=@venue.name%></h3>
+	<%@tips.each  do |tip|%>
+	<li>		
+	<ul class="tip">
+		<li><%=image_tag(tip.user.photo, :class => "floatimg")%></li>
+	    <li><h4><%=tip.user.firstName%></h4></li>	    
+		<li>Tip: <%=tip.text%></li>
+		<li>Likes: <%=tip.likes["count"]%></li>
+	</ul>
+	</li>
+	<%end%>
+</ul>
+</div>

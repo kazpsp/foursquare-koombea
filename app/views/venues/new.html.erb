@@ -1,0 +1,22 @@
+<h2>Venues</h2>
+<div id="venues">
+	
+<%@results.each  do |venue|%>
+
+<ul class="venue">
+	<li><h3><%=venue.name%></h3></li>
+	<iframe width='500' height='300' frameBorder='0' src='http://a.tiles.mapbox.com/v3/kazpsp.map-gmwwx3wv.html#17/<%=venue.location["lat"]%>/<%=venue.location["lng"]%>'></iframe>
+	<%uri=get_icon(venue)%>	
+	<li><img src=<%=uri%> /></li>
+	<li>City: <%=venue.location["city"]%>, <%=venue.location["country"]%></li>
+	<li>Address: <%=venue.location["address"]%></li>
+	<li>Lat: <%=venue.location["lat"]%></li>
+	<li>Lon: <%=venue.location["lng"]%></li>
+	<li>Stats: <%=venue.stats["checkinsCount"]%></li>
+	<li>Tips: <%=venue.stats["tipCount"]%></li>
+	<li><%=link_to("tipz", 	{:controller => "tips", :action => "new", :venue_id => venue.id}, :class => "btn btn-primary badgebu")%></li>
+		
+</ul>
+<%end%>	
+</div> 
+

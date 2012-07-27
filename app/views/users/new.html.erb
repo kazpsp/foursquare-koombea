@@ -1,0 +1,60 @@
+<%= render :partial => 'users/submenu' %>
+<div id="profile">
+<h2>Profile</h2>
+<ul>	
+	<li><%=image_tag(@results.photo)%></li>
+	<div id="data">
+	<li><%=@results.id%></li>
+	<li><%=@results.firstName%></li>
+	<li><%=@results.lastName%></li>
+	<li><%=@results.gender%></li>
+	<li><%=@results.homeCity%></li>
+	<li><%=@results.contact.email%></li>
+	</div>
+</ul>
+</div>
+
+<div id="badges">
+<h2> Badges</h2>
+<ul>
+	<div id="block">
+	<%@badges.badges.each_with_index  do |badge, index|%>	
+		<%if default_img(badge)%>
+			<%if index!=0 and index%6==0 %>
+			</div>	
+			<div id="block">
+			<%end%>
+				<li>
+					<%=image_tag(get_url(badge))%>	
+					<p class="btn btn-primary badgebu"><%=badge[1]["name"]%></p>
+				</li>
+		<%end%>
+	<%end%>
+</ul>
+</div>
+
+<div id="friends">
+<ul>
+	<h2>Friends</h2>
+	<div id="center">
+	<div id="block" class="friendblock">
+	<%@friends.each_with_index  do |friend, index|%>	
+		<%if index!=0 and index%2==0 %>
+			</div>	
+			</div>
+			<div id="center">
+			<div id="block" class="friendblock">
+				
+		<%end%>		
+		<li>					
+			    <%=image_tag(friend.photo)%>
+				<span class="info">
+				<h4><%=friend.firstName%></h4>
+				<%=friend.gender%><br />
+				<%=friend.homeCity%>
+				</span>				
+		</li>	
+	<%end%>
+</ul>
+<div id="friendend"></div>
+</div>

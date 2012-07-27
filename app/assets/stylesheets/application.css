@@ -1,0 +1,175 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+#profile img{
+	float: left;
+	margin-right:10px; 
+}
+#profile ul{
+	overflow:auto;
+	width: 400px;
+	border: 1px solid black;
+	margin-left: 220px;
+}
+
+#data{
+	
+}
+ul li{	
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+ul{
+	margin: 0;
+	padding: 0;	
+}
+h2{
+	text-align: center;
+}
+#badges{
+	padding-top:80px;
+	width: 800px;
+	margin: 0 auto;
+}
+
+#block{
+	float:left;
+	margin: 10px;
+}
+
+
+#badges ul li{
+	float:left;
+	margin: 5px;
+	width: 114px;
+}
+#friends ul li{
+	width: 400px;
+	margin: 10px;
+	float:left;
+	border: 1px solid black;
+	
+}
+#friends ul li img{
+	float: left;
+}
+#badges p {
+	margin: 5px auto 0 auto;
+	text-align: center;
+	width: 100px;
+}
+
+#friends{
+	padding-top:80px;
+	width: 1145px;
+	margin: 0 auto;
+	clear:both;
+}
+
+#friendend{
+	clear: both;
+	
+}
+input{
+  	margin: 0;  	
+}
+
+.form{
+	border: 1px solid black;
+	padding: 20px;
+	width: 300px;
+}
+
+.floatleft{
+	float:left;
+	margin-right: 20px;	
+}
+
+.info{
+	float: left;
+	padding: 5px;
+}
+
+.friendblock{
+	padding-left:130px;
+	clear:both;	
+}
+
+#center{
+	width: 1145px;
+	margin: 0 auto
+}
+
+.floatimg{
+	float: left;
+}
+
+.tip{
+	border: 1px solid #000000;
+	overflow: auto;
+	width: 500px;
+	margin-bottom: 20px;
+}
+
+.venue{
+	float:left;
+	margin-right: 9px;
+	border: 1px solid black;	
+}
+
+#users{
+	padding-top: 120px;
+}
+
+#venue{
+	padding-top: 80px;
+}
+
+#venues{
+	padding-left: 50px;
+}
+
+#profile{
+	padding-top:80px;
+}
+
+@media (min-width: 980px) {
+  .subnav-fixed {
+  	background-color: #9fd8ef;
+  	position: fixed;
+    top: 40px;
+    z-index: 1020; /* 10 less than .navbar-fixed to prevent any overlap */
+    border-color: #d5d5d5;
+    border-width: 0 0 1px; /* drop the border on the fixed edges */
+    -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+            border-radius: 0;
+    -webkit-box-shadow: inset 0 1px 0 #fff, 0 1px 5px rgba(0,0,0,.1);
+       -moz-box-shadow: inset 0 1px 0 #fff, 0 1px 5px rgba(0,0,0,.1);
+            box-shadow: inset 0 1px 0 #fff, 0 1px 5px rgba(0,0,0,.1);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); /* IE6-9 */
+  }
+  .subnav-fixed .nav {
+   width:1145px;
+    margin: 0 auto;
+    padding: 0 1px;
+  }
+  .subnav .nav > li:first-child > a,
+  .subnav .nav > li:first-child > a:hover {
+    -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+            border-radius: 0;
+  }
+}

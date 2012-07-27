@@ -1,0 +1,65 @@
+<%= render :partial => 'homes/submenu' %>
+
+<div id="users">
+<h1>Find Users</h1>
+
+<%= form_tag({:controller => "users", :action => "new"}, :method => :get, :class => "form") do%>
+	<div class="field"><%= label_tag(:phone, "phone") %>
+	<%= text_field_tag(:phone) %></div>
+	
+	<div class="field"><%= label_tag(:email, "email") %>
+	<%= text_field_tag(:email) %></div>
+	
+	<div class="field"><%= label_tag(:twitter, "twitter") %>
+	<%= text_field_tag(:twitter) %></div>
+
+	<div class="field"><%= label_tag(:twitterSource, "twitterSource") %>
+	<%= text_field_tag(:twitterSource) %></div>
+
+	<div class="field"><%= label_tag(:fbid, "fbid") %>
+	<%= text_field_tag(:fbid) %></div>
+
+	<div class="field"><%= label_tag(:name, "name") %>
+	<%= text_field_tag(:name) %></div>
+	
+	<%= submit_tag "Search" , :class => "btn btn-primary"%>	<i class="icon-search"></i>
+<%end%>
+</div>
+
+<br>
+<div id="venue">
+<h1>Find Venues</h1>
+
+<div class="floatleft">
+<h3>By LON,LAT</h3>
+<%= form_tag({:controller => "venues", :action => "new"}, :method => :get, :class => "form") do%>
+
+	<div class="field"><%= label_tag(:ll, "location") %>
+	<%= text_field_tag(:ll) %></div>
+			
+	<div class="field"><%= label_tag(:query, "Name") %>
+		<%= text_field_tag(:query) %></div>
+	       
+	<div class="field"><%= label_tag(:radius, "radius") %>
+		<%= text_field_tag(:radius) %></div>		
+	
+    <%= submit_tag "Search", :class => "btn btn-primary"%>	<i class="icon-search"></i>
+<%end%>
+</div>
+
+<h3>By Proximity to</h3>
+<%= form_tag({:controller => "venues", :action => "new"}, :method => :get, :class => "form floatleft") do%>
+
+	<div class="field"><%= label_tag(:near, "Near") %>
+	<%= text_field_tag(:near) %></div>
+	
+	
+	<div class="field"><%= label_tag(:query, "Name") %>
+		<%= text_field_tag(:query) %></div>
+	       
+	<div class="field"><%= label_tag(:radius, "radius") %>
+		<%= text_field_tag(:radius) %></div>	
+	
+    <%= submit_tag "Search", :class => "btn btn-primary"%>	<i class="icon-search"></i>
+<%end%>
+</div>
