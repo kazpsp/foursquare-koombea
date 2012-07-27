@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   # require 'openssl'
   # require 'YAML'
   # require 'Foursquare2'
-  OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
+  # OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
  
  private
  
